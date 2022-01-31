@@ -1,0 +1,15 @@
+ <div className='sort-iems'>
+                            <label for="sort">Sort by</label>
+                            <select id="sort" name='sort'>
+                                <option value="1">Newest first</option>
+                                <option value="2">Newest second</option>
+                                <option value="3">Newest third</option>
+                                <option value="4">Newest fourth</option>
+                            </select>
+                        </div>
+                        <div className='search-recipes'>
+                            <i className="fas fa-search"></i>
+                            <span>
+                                <input type="search" placeholder='Serach recipe' />
+                            </span>
+                        </div>
