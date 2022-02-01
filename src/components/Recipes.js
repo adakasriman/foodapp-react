@@ -1,6 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import options from "../options.json";
 
 function Recipes(props) {
+
+    const [showDetails, setShowDetails] = useState(false);
+    const [data] = useState(options);
+
+    const dropdownHandular = (e) => {
+        e.preventDefault();
+        setShowDetails(true);
+        openDiv();
+    }
+
+    const openDiv = () => {
+        if (showDetails) {
+            // const dropDownDiv = document.getElementsByClassName("filter-types");
+
+        }
+    }
     return (
         <div>
             <div className='our-recipes'>
@@ -12,17 +29,20 @@ function Recipes(props) {
                                 Filter recipes by
                             </h5>
                             <div className=''>
-                                <i className="fas fa-plus"></i>
+                                <button className='OC-btn' onClick={dropdownHandular}></button>
                             </div>
                         </div>
                         <div className='form-selectAndSearch'>
                             <div className='sort-iems'>
                                 <label for="sort">Sort by</label>
-                                <select className='form-select' id="sort" name='sort'>
-                                    <option value="1">Newest first</option>
-                                    <option value="2">Newest second</option>
-                                    <option value="3">Newest third</option>
-                                    <option value="4">Newest fourth</option>
+                                <select className='form-select' id="sort" name='sort'>   
+                                    {
+                                        data.map((item, index) => {
+                                            return (
+                                                <option value={index}>{item.item}</option>
+                                            )
+                                        })
+                                    }
                                 </select>
                             </div>
                             <div className='search-recipes'>

@@ -1,201 +1,35 @@
-import React from 'react';
-import foodIitem from "../images/food-item.jpg"
+import React, { useState } from 'react';
+// import img from "../images/food-img.jpg";
+
+import json from "../itemDetails.json";
 
 function RecipesList(props) {
+    const [data] = useState(json);
+    // console.log(img);
     return (
         <div className='recipes-list'>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
+            {
+                data.map((item, index) => {
+                    return (
+                        <div className='list-item' key={index}>
+                            <div className='listItem-setup'>
+                                <div className='dateAndNation'>
+                                    <div>
+                                        {item.date}
+                                    </div>
+                                    <div>
+                                        {item.country}
+                                    </div>
+                                </div>
+                                <h3>
+                                    {item.title}
+                                </h3>
+                            </div>
+                            <img src={item.img} alt='food item' width="200px" />
                         </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
-            <div className='list-item'>
-                <div className='listItem-setup'>
-                    <div className='dateAndNation'>
-                        <div>
-                            23TH MAY 2022
-                        </div>
-                        <div>
-                            Indian
-                        </div>
-                    </div>
-                    <h3>
-                        caramelised Apple and Herb Flocchi kjvbd ncksd ncksdj
-                    </h3>
-                </div>
-                <img src={foodIitem} alt='food item' width="200px" />
-            </div>
+                    )
+                })
+            }
         </div>
     );
 }

@@ -122,6 +122,19 @@ section {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+ 
+.our-recipes .filter .filter-items .OC-btn {
+  position: relative;
+  top: -5px;
+  content: "";
+  width: 15px;
+  cursor: pointer;
+}
+
+/* .our-recipes .filter .filter-items .OC-btn::before {
+  content: "";
+  width: 50px;
+} */
 
 .our-recipes .filter .filter-items h5 {
   width: 125px;
